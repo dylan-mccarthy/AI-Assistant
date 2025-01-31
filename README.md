@@ -83,3 +83,6 @@ The system is designed with a modular architecture:
    ```bash
    git clone https://github.com/yourusername/ai-assistant.git
    cd ai-assistant
+
+### AI Use Transparency
+This Project heavily used AI in the planning phase and development

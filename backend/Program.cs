@@ -29,14 +29,15 @@ app.MapPost("/assistant", async (HttpContext context, LLMService llmService) =>
     var input = await reader.ReadToEndAsync();
     logger.LogInformation("Received assistant request with input: {Input}", input);
     
+    // Use top-level "LLMProvider" from configuration.
     var provider = app.Configuration["LLMProvider"]?.ToLowerInvariant();
     logger.LogInformation("Using LLM provider: {Provider}", provider);
     
     string llmResponse = provider switch
     {
         "openai" or "claude" => await llmService.HandleRemoteLLM(provider, input),
-        "ollama"          => await llmService.HandleLocalLLM(input),
-        _                 => "LLM provider not supported."
+        "ollama"            => await llmService.HandleLocalLLM(input),
+        _                   => "LLM provider not supported."
     };
     
     logger.LogInformation("Returning response: {Response}", llmResponse);

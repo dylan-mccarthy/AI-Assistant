@@ -84,5 +84,5 @@ The system is designed with a modular architecture:
    git clone https://github.com/yourusername/ai-assistant.git
    cd ai-assistant
 
-### AI Use Transparency
+## AI Use Transparency
 This Project heavily used AI in the planning phase and development

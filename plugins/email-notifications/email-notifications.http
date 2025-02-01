@@ -1,0 +1,6 @@
+@email_notifications_HostAddress = http://localhost:5250
+
+GET {{email_notifications_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

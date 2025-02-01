@@ -1,0 +1,69 @@
+# -----------------------------
+# .NET / Visual Studio / Rider
+# -----------------------------
+# Build output directories
+**/bin/
+**/obj/
+**/out/
+
+# User-specific files
+*.user
+*.suo
+*.sln.docstates
+*.dbmdl
+
+# Visual Studio / Rider settings
+.vs/
+.vscode/
+.idea/
+
+# Dotnet Test Results
+TestResults/
+
+# -----------------------------
+# Node.js / Next.js
+# -----------------------------
+# Dependency directories
+**/node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Coverage directory used by testing tools
+coverage/
+dist/
+
+# Local environment variables
+.env
+.env.*.local
+
+# -----------------------------
+# Docker
+# -----------------------------
+docker-compose.override.yml
+docker-compose.*.yml
+
+# -----------------------------
+# Operating System Files
+# -----------------------------
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# -----------------------------
+# Miscellaneous
+# -----------------------------
+# NuGet packages directory
+**/packages/
+
+# Logs and temporary files
+*.log
+*.tmp

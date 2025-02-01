@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: "9.0.x"
+      - name: Build backend
+        run: dotnet build ./backend/ai-backend/ai-backend.csproj
+      - name: Build email-notifications plugin
+        run: dotnet build ./plugins/email-notifications/email-notifications/email-notifications.csproj
+      - name: Build file-uploads plugin
+        run: dotnet build ./plugins/file-uploads/file-uploads/file-uploads.csproj
+      - name: Build reminders plugin
+        run: dotnet build ./plugins/reminders/reminders/reminders.csproj
